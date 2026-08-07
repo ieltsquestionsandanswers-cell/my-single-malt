@@ -1,174 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>나만의 싱글몰트</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
-<meta name="description" content="스카치 싱글몰트 162개 브랜드에서 취향에 맞는 위스키를 찾아주는 태블릿 추천 서비스">
-<meta name="theme-color" content="#0a0c0d">
+<title>나만의 싱글몰트</title>
+<meta name="description" content="향, 피트, 캐스크, 질감과 음용 취향을 분석해 가장 잘 맞는 싱글몰트 브랜드를 추천합니다.">
+<meta name="theme-color" content="#101214">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="나만의 싱글몰트">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
 <link rel="icon" href="icons/icon-192.png">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<div id="app">
-
-  <!-- ------------------------------------------------------- 연령 확인 -->
-  <section class="screen active" id="screen-age">
-    <div class="center">
-      <div class="brandmark">MY SINGLE MALT<small>나만의 싱글몰트</small></div>
-      <div class="age-title">만 19세 이상이신가요?</div>
-      <p class="age-note">
-        이 서비스는 주류에 대한 정보를 제공합니다. 대한민국 법률에 따라 만 19세 미만은 이용할 수 없습니다.<br>
-        음주는 건강을 해칠 수 있으며, 임신 중 음주는 태아의 건강을 해칩니다.
-      </p>
-      <div class="age-actions">
-        <button class="btn btn-ghost" id="age-no">아니요</button>
-        <button class="btn btn-primary" id="age-yes">네, 만 19세 이상입니다</button>
-      </div>
-      <p class="age-note" id="age-deny" style="display:none;color:var(--danger)">
-        만 19세 미만은 이용하실 수 없습니다.
-      </p>
-    </div>
-  </section>
-
-  <!-- ------------------------------------------------------------- 홈 -->
-  <section class="screen" id="screen-home">
-    <div class="topbar">
-      <div class="logo">MY SINGLE MALT</div>
-      <div class="spacer"></div>
-      <div class="tag" id="home-version">데이터 불러오는 중…</div>
-    </div>
-    <div class="hairline"></div>
-    <div class="hero">
-      <div class="hero-left">
-        <h1 class="hero-title">몇 가지 질문으로<br><b>내 취향의 싱글몰트</b>를 찾아드립니다</h1>
-        <p class="hero-sub">
-          향, 바디, 피니시, 예산과 마시는 상황까지 12~26개의 질문으로 확인한 뒤
-          스카치 싱글몰트 브랜드의 향미 데이터와 대조해 네 가지 방향으로 추천합니다.
-          정답을 강요하지 않고, 왜 그 브랜드인지 근거를 함께 보여드립니다.
-        </p>
-        <div class="hero-actions">
-          <button class="btn btn-primary" id="btn-start">취향 찾기 시작</button>
-          <button class="btn btn-ghost" id="btn-index">브랜드 전체 보기</button>
-          <button class="btn btn-ghost" id="btn-guide">향미 가이드</button>
-        </div>
-      </div>
-      <div class="hero-right" id="home-stats"></div>
-    </div>
-  </section>
-
-  <!-- ----------------------------------------------------------- 퀴즈 -->
-  <section class="screen" id="screen-quiz">
-    <div class="topbar">
-      <div class="logo">MY SINGLE MALT</div>
-      <div class="spacer"></div>
-      <button class="btn btn-ghost btn-sm" id="quiz-exit">처음으로</button>
-    </div>
-    <div class="progress-wrap">
-      <div class="progress-meta">
-        <span id="quiz-count">질문 1</span>
-        <span id="quiz-features">확인된 향미 0개</span>
-      </div>
-      <div class="progress-bar"><div class="progress-fill" id="quiz-progress"></div></div>
-    </div>
-    <div class="q-head">
-      <div class="q-cat" id="q-cat"></div>
-      <h2 class="q-title" id="q-title"></h2>
-      <p class="q-sub" id="q-sub"></p>
-    </div>
-    <div class="scroll" id="q-body"></div>
-    <div class="q-foot">
-      <button class="btn btn-ghost btn-sm" id="quiz-prev">이전</button>
-      <div class="hint" id="quiz-hint"></div>
-      <button class="btn btn-primary" id="quiz-next">다음</button>
-    </div>
-  </section>
-
-  <!-- --------------------------------------------------------- 분석 중 -->
-  <section class="screen" id="screen-analyzing">
-    <div class="center">
-      <div class="spinner"></div>
-      <div class="age-title">가장 잘 맞는 싱글몰트를 찾고 있습니다</div>
-      <div class="analyzing-step" id="analyzing-step"></div>
-    </div>
-  </section>
-
-  <!-- ----------------------------------------------------------- 결과 -->
-  <section class="screen" id="screen-result">
-    <div class="topbar">
-      <div class="logo">MY SINGLE MALT</div>
-      <div class="spacer"></div>
-      <button class="btn btn-ghost btn-sm" id="result-restart">다시 하기</button>
-      <button class="btn btn-ghost btn-sm" id="result-home">처음으로</button>
-    </div>
-    <div class="hairline"></div>
-    <div class="scroll">
-      <div class="result-head" style="padding-top:14px">
-        <div class="result-title" id="result-title">추천 결과</div>
-        <div class="result-sub" id="result-sub"></div>
-        <div class="profile-bar" id="result-profiles"></div>
-      </div>
-      <div class="cards" id="result-cards"></div>
-      <div class="result-head">
-        <div class="result-sub" id="result-note"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ----------------------------------------------------------- 상세 -->
-  <section class="screen" id="screen-detail">
-    <div class="topbar">
-      <button class="btn btn-ghost btn-sm" id="detail-back">뒤로</button>
-      <div class="spacer"></div>
-      <div class="logo" id="detail-logo"></div>
-    </div>
-    <div class="hairline"></div>
-    <div class="scroll">
-      <div class="result-head" style="padding-top:14px">
-        <div class="result-title" id="detail-title"></div>
-        <div class="result-sub" id="detail-sub"></div>
-      </div>
-      <div class="detail-body" id="detail-body"></div>
-    </div>
-  </section>
-
-  <!-- ------------------------------------------------------- 브랜드 목록 -->
-  <section class="screen" id="screen-index">
-    <div class="topbar">
-      <button class="btn btn-ghost btn-sm" id="index-back">뒤로</button>
-      <div class="spacer"></div>
-      <div class="logo" id="index-count"></div>
-    </div>
-    <div class="hairline"></div>
-    <div class="index-tools" style="padding-top:14px">
-      <input class="search-input" id="index-search" placeholder="브랜드 · 증류소 이름 검색" style="flex:1 1 280px">
-      <div class="chip-row" id="index-regions"></div>
-    </div>
-    <div class="scroll"><div class="index-grid" id="index-grid"></div></div>
-  </section>
-
-  <!-- ------------------------------------------------------- 향미 가이드 -->
-  <section class="screen" id="screen-guide">
-    <div class="topbar">
-      <button class="btn btn-ghost btn-sm" id="guide-back">뒤로</button>
-      <div class="spacer"></div>
-      <div class="logo">FLAVOUR GUIDE</div>
-    </div>
-    <div class="hairline"></div>
-    <div class="result-head" style="padding-top:14px">
-      <div class="result-title">향미 방향 8가지</div>
-      <div class="result-sub">추천 결과에 쓰이는 취향 분류입니다. 어떤 방향이 마음에 드는지 미리 살펴보세요.</div>
-    </div>
-    <div class="scroll"><div class="guide-grid" id="guide-grid"></div></div>
-  </section>
-
-</div>
+<div id="ambient"></div>
+<div id="app"></div>
 <script type="module" src="js/app.js"></script>
 </body>
 </html>

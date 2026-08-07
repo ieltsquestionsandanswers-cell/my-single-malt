@@ -1,9 +1,11 @@
 /* 나만의 싱글몰트 - 오프라인 캐시 */
-const CACHE = 'msm-v1';
+const CACHE = 'msm-v2';
 const ASSETS = [
   './',
   './index.html',
   './css/styles.css',
+  './fonts/display-serif.woff2',
+  './fonts/body-sans.woff2',
   './js/app.js',
   './js/engine.js',
   './data/brands.json',
