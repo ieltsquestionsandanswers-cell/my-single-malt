@@ -1,0 +1,6582 @@
+{
+ "schemaVersion": 1,
+ "questionCount": 44,
+ "mandatoryQuestions": [
+  "Q1",
+  "Q2",
+  "Q9",
+  "Q11",
+  "Q14",
+  "Q16",
+  "Q26",
+  "Q31",
+  "Q33",
+  "Q35",
+  "Q40",
+  "Q44"
+ ],
+ "minQuestions": 12,
+ "maxQuestions": 26,
+ "recommendedMin": 16,
+ "recommendedMax": 22,
+ "questions": [
+  {
+   "id": "Q1",
+   "category": "PURPOSE",
+   "title": "오늘 어떤 싱글몰트를 찾고 계신가요?",
+   "subtitle": "선택에 따라 추천의 방향이 달라집니다.",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 10,
+   "isMandatory": true,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "alcoholIntensity",
+    "body",
+    "complexity",
+    "oakTannin",
+    "smokeIntensity"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q1_1",
+     "questionId": "Q1",
+     "label": "나를 위한 한 병",
+     "description": "",
+     "icon": "glass",
+     "featureEffects": {},
+     "flags": {
+      "purpose": "self"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q1_2",
+     "questionId": "Q1",
+     "label": "선물할 위스키",
+     "description": "",
+     "icon": "gift",
+     "featureEffects": {},
+     "flags": {
+      "purpose": "gift",
+      "giftWeight": 4,
+      "availabilityWeight": 3
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q1_3",
+     "questionId": "Q1",
+     "label": "처음 마셔볼 싱글몰트",
+     "description": "",
+     "icon": "flower",
+     "featureEffects": {
+      "smokeIntensity": {
+       "t": 1,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "alcoholIntensity": {
+       "t": 2,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "oakTannin": {
+       "t": 2,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {
+      "purpose": "first",
+      "beginnerWeight": 5
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q1_4",
+     "questionId": "Q1",
+     "label": "새로운 스타일에 도전할 위스키",
+     "description": "",
+     "icon": "fire",
+     "featureEffects": {
+      "complexity": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {
+      "purpose": "challenge",
+      "noveltyWeight": 4,
+      "excludeTasted": true
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    },
+    {
+     "id": "Q1_5",
+     "questionId": "Q1",
+     "label": "식사나 모임에서 함께 마실 위스키",
+     "description": "",
+     "icon": "cheese",
+     "featureEffects": {
+      "body": {
+       "t": 3,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {
+      "purpose": "social"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 5,
+     "active": true
+    },
+    {
+     "id": "Q1_6",
+     "questionId": "Q1",
+     "label": "아직 정하지 못했어요",
+     "description": "",
+     "icon": "question",
+     "featureEffects": {},
+     "flags": {
+      "purpose": "unknown"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 6,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q2",
+   "category": "EXPERIENCE",
+   "title": "싱글몰트를 얼마나 자주 드시나요?",
+   "subtitle": "경험 수준에 따라 질문의 깊이를 조절합니다.",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 11,
+   "isMandatory": true,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "alcoholIntensity",
+    "complexity",
+    "smokeIntensity"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q2_1",
+     "questionId": "Q2",
+     "label": "거의 처음입니다",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "alcoholIntensity": {
+       "t": 2,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "smokeIntensity": {
+       "t": 1,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {
+      "experienceLevel": 1,
+      "beginnerWeight": 5
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q2_2",
+     "questionId": "Q2",
+     "label": "몇 번 마셔봤습니다",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "experienceLevel": 2,
+      "beginnerWeight": 3
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q2_3",
+     "questionId": "Q2",
+     "label": "가끔 한 잔씩 마십니다",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "experienceLevel": 3
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q2_4",
+     "questionId": "Q2",
+     "label": "집에 여러 병이 있습니다",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "experienceLevel": 4
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    },
+    {
+     "id": "Q2_5",
+     "questionId": "Q2",
+     "label": "지역과 캐스크를 비교하며 마십니다",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "complexity": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {
+      "experienceLevel": 5,
+      "noveltyWeight": 3
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 5,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q3",
+   "category": "EXPERIENCE",
+   "title": "지금까지 마셔본 싱글몰트 브랜드가 있나요?",
+   "subtitle": "브랜드명을 검색해 최대 10개까지 선택할 수 있습니다. 기억나지 않으면 넘어가도 됩니다.",
+   "selectionType": "BRAND_SEARCH",
+   "minSelection": 0,
+   "maxSelection": 10,
+   "orderGroup": 12,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": {
+    "all": [
+     {
+      "flagAtLeast": [
+       "experienceLevel",
+       2
+      ]
+     }
+    ]
+   },
+   "skipCondition": null,
+   "coversFeatures": [],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": []
+  },
+  {
+   "id": "Q4",
+   "category": "EXPERIENCE",
+   "title": "선택한 각 브랜드는 어떠셨나요?",
+   "subtitle": "좋았던 브랜드의 향미는 취향에 반영하고, 맞지 않았던 브랜드와 비슷한 후보는 감점합니다.",
+   "selectionType": "BRAND_RATING",
+   "minSelection": 0,
+   "maxSelection": 10,
+   "orderGroup": 13,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": {
+    "all": [
+     {
+      "hasTastedBrands": true
+     }
+    ]
+   },
+   "skipCondition": null,
+   "coversFeatures": [],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "RATE_LOVED",
+     "questionId": "Q4",
+     "label": "아주 좋았어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "RATE_OK",
+     "questionId": "Q4",
+     "label": "괜찮았어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "RATE_DISLIKED",
+     "questionId": "Q4",
+     "label": "취향과 달랐어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "RATE_UNSURE",
+     "questionId": "Q4",
+     "label": "잘 기억나지 않아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q5",
+   "category": "AVOID",
+   "title": "위스키를 마시며 불편했던 경험이 있나요?",
+   "subtitle": "복수 선택할 수 있습니다. 불편했던 요소는 추천에서 크게 감점합니다.",
+   "selectionType": "MULTI",
+   "minSelection": 1,
+   "maxSelection": 4,
+   "orderGroup": 14,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "alcoholIntensity",
+    "body",
+    "complexity",
+    "drySpice",
+    "oakTannin",
+    "oily",
+    "peatMedicinal",
+    "smokeIntensity",
+    "sweetness"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q5_1",
+     "questionId": "Q5",
+     "label": "알코올 향이 너무 강했어요",
+     "description": "",
+     "icon": "fire",
+     "featureEffects": {
+      "alcoholIntensity": {
+       "t": 1,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q5_2",
+     "questionId": "Q5",
+     "label": "연기 냄새가 너무 강했어요",
+     "description": "",
+     "icon": "smoke",
+     "featureEffects": {
+      "smokeIntensity": {
+       "t": 1,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [
+      {
+       "feature": "smokeIntensity",
+       "maxAllowed": 2
+      }
+     ],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q5_3",
+     "questionId": "Q5",
+     "label": "소독약 같은 향이 싫었어요",
+     "description": "",
+     "icon": "wave",
+     "featureEffects": {
+      "peatMedicinal": {
+       "t": 0,
+       "w": 5,
+       "hard": true,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [
+      {
+       "feature": "peatMedicinal",
+       "maxAllowed": 1
+      }
+     ],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q5_4",
+     "questionId": "Q5",
+     "label": "너무 달았어요",
+     "description": "",
+     "icon": "honey",
+     "featureEffects": {
+      "sweetness": {
+       "t": 1,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    },
+    {
+     "id": "Q5_5",
+     "questionId": "Q5",
+     "label": "나무 맛과 떫은맛이 강했어요",
+     "description": "",
+     "icon": "oak",
+     "featureEffects": {
+      "oakTannin": {
+       "t": 1,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 5,
+     "active": true
+    },
+    {
+     "id": "Q5_6",
+     "questionId": "Q5",
+     "label": "너무 가볍고 밋밋했어요",
+     "description": "",
+     "icon": "glass",
+     "featureEffects": {
+      "body": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "complexity": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 6,
+     "active": true
+    },
+    {
+     "id": "Q5_7",
+     "questionId": "Q5",
+     "label": "너무 기름지고 무거웠어요",
+     "description": "",
+     "icon": "cask",
+     "featureEffects": {
+      "oily": {
+       "t": 1,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "body": {
+       "t": 2,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 7,
+     "active": true
+    },
+    {
+     "id": "Q5_8",
+     "questionId": "Q5",
+     "label": "향신료의 자극이 강했어요",
+     "description": "",
+     "icon": "spice",
+     "featureEffects": {
+      "drySpice": {
+       "t": 1,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 8,
+     "active": true
+    },
+    {
+     "id": "Q5_9",
+     "questionId": "Q5",
+     "label": "특별히 없어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": true,
+     "displayOrder": 9,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q6",
+   "category": "STYLE",
+   "title": "첫 모금에서 어떤 느낌을 원하시나요?",
+   "subtitle": "가장 먼저 떠오르는 느낌을 고르세요.",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 20,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "body",
+    "citrus",
+    "coastalBriny",
+    "complexity",
+    "creamy",
+    "driedFruit",
+    "dryness",
+    "finishLength",
+    "floral",
+    "freshOrchardFruit",
+    "honey",
+    "maritimeSeaweed",
+    "peatEarthy",
+    "smokeAshy",
+    "smokeIntensity",
+    "stoneFruit",
+    "sweetness",
+    "tropicalFruit"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q6_1",
+     "questionId": "Q6",
+     "label": "가볍고 산뜻하게",
+     "description": "",
+     "icon": "flower",
+     "featureEffects": {
+      "body": {
+       "t": 2,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "floral": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "citrus": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "smokeIntensity": {
+       "t": 0,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q6_2",
+     "questionId": "Q6",
+     "label": "달콤하고 부드럽게",
+     "description": "",
+     "icon": "honey",
+     "featureEffects": {
+      "sweetness": {
+       "t": 4,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "honey": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "creamy": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "smokeIntensity": {
+       "t": 0,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q6_3",
+     "questionId": "Q6",
+     "label": "과일이 풍성하게",
+     "description": "",
+     "icon": "apple",
+     "featureEffects": {
+      "freshOrchardFruit": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "stoneFruit": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "tropicalFruit": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q6_4",
+     "questionId": "Q6",
+     "label": "진하고 묵직하게",
+     "description": "",
+     "icon": "cask",
+     "featureEffects": {
+      "body": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "driedFruit": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "finishLength": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    },
+    {
+     "id": "Q6_5",
+     "questionId": "Q6",
+     "label": "바다처럼 짭조름하게",
+     "description": "",
+     "icon": "wave",
+     "featureEffects": {
+      "coastalBriny": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "maritimeSeaweed": {
+       "t": 3,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      },
+      "dryness": {
+       "t": 4,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 5,
+     "active": true
+    },
+    {
+     "id": "Q6_6",
+     "questionId": "Q6",
+     "label": "연기와 피트가 강렬하게",
+     "description": "",
+     "icon": "smoke",
+     "featureEffects": {
+      "smokeIntensity": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "peatEarthy": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "smokeAshy": {
+       "t": 4,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 6,
+     "active": true
+    },
+    {
+     "id": "Q6_7",
+     "questionId": "Q6",
+     "label": "여러 향이 복잡하게 변하도록",
+     "description": "",
+     "icon": "glass",
+     "featureEffects": {
+      "complexity": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "finishLength": {
+       "t": 4,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 7,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q7",
+   "category": "STYLE",
+   "title": "전체적인 풍미 강도는 어느 정도가 좋나요?",
+   "subtitle": "입안에서 느껴지는 전체적인 세기입니다.",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 21,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "body",
+    "complexity",
+    "finishLength"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q7_1",
+     "questionId": "Q7",
+     "label": "매우 가볍게",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "body": {
+       "t": 1,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "finishLength": {
+       "t": 1,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q7_2",
+     "questionId": "Q7",
+     "label": "가볍고 편안하게",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "body": {
+       "t": 2,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "finishLength": {
+       "t": 2,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q7_3",
+     "questionId": "Q7",
+     "label": "중간 정도",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "body": {
+       "t": 3,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "finishLength": {
+       "t": 3,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q7_4",
+     "questionId": "Q7",
+     "label": "진하고 풍부하게",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "body": {
+       "t": 4,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "finishLength": {
+       "t": 4,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    },
+    {
+     "id": "Q7_5",
+     "questionId": "Q7",
+     "label": "매우 강렬하게",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "body": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "finishLength": {
+       "t": 5,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "complexity": {
+       "t": 4,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 5,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q8",
+   "category": "STYLE",
+   "title": "쉽게 이해되는 맛과 복잡한 맛 중 어느 쪽인가요?",
+   "subtitle": "복합성이 높을수록 마실 때마다 다른 향이 느껴집니다.",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 22,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "body",
+    "complexity"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q8_1",
+     "questionId": "Q8",
+     "label": "편안하고 단순한 맛",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "complexity": {
+       "t": 1,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q8_2",
+     "questionId": "Q8",
+     "label": "편안하면서 조금의 변화",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "complexity": {
+       "t": 2,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q8_3",
+     "questionId": "Q8",
+     "label": "균형 잡힌 복합성",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "complexity": {
+       "t": 3,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q8_4",
+     "questionId": "Q8",
+     "label": "마실 때마다 다른 향",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "complexity": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    },
+    {
+     "id": "Q8_5",
+     "questionId": "Q8",
+     "label": "강하고 독특한 개성",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "complexity": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "body": {
+       "t": 4,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 5,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q9",
+   "category": "PEAT",
+   "title": "연기 향이 나는 위스키를 좋아하시나요?",
+   "subtitle": "피트(peat)는 이탄을 태워 보리를 건조할 때 생기는 훈연향입니다.",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 30,
+   "isMandatory": true,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "finishLength",
+    "peatEarthy",
+    "peatMedicinal",
+    "smokeAshy",
+    "smokeIntensity"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q9_none",
+     "questionId": "Q9",
+     "label": "전혀 원하지 않아요",
+     "description": "",
+     "icon": "smoke",
+     "featureEffects": {
+      "smokeIntensity": {
+       "t": 0,
+       "w": 5,
+       "hard": true,
+       "tol": 1
+      },
+      "peatMedicinal": {
+       "t": 0,
+       "w": 5,
+       "hard": true,
+       "tol": 1
+      },
+      "smokeAshy": {
+       "t": 0,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {
+      "peatStance": "none"
+     },
+     "exclusionEffects": [
+      {
+       "feature": "smokeIntensity",
+       "maxAllowed": 1
+      },
+      {
+       "feature": "peatMedicinal",
+       "maxAllowed": 1
+      }
+     ],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q9_trace",
+     "questionId": "Q9",
+     "label": "아주 약한 정도만 괜찮아요",
+     "description": "",
+     "icon": "smoke",
+     "featureEffects": {
+      "smokeIntensity": {
+       "t": 1,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "peatMedicinal": {
+       "t": 1,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {
+      "peatStance": "trace"
+     },
+     "exclusionEffects": [
+      {
+       "feature": "smokeIntensity",
+       "maxAllowed": 2
+      }
+     ],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q9_light",
+     "questionId": "Q9",
+     "label": "은은한 스모크를 좋아해요",
+     "description": "",
+     "icon": "smoke",
+     "featureEffects": {
+      "smokeIntensity": {
+       "t": 2,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "peatEarthy": {
+       "t": 2,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {
+      "peatStance": "light"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q9_clear",
+     "questionId": "Q9",
+     "label": "확실한 스모크를 좋아해요",
+     "description": "",
+     "icon": "fire",
+     "featureEffects": {
+      "smokeIntensity": {
+       "t": 4,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "peatEarthy": {
+       "t": 3,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "smokeAshy": {
+       "t": 3,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {
+      "peatStance": "strong"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    },
+    {
+     "id": "Q9_max",
+     "questionId": "Q9",
+     "label": "매우 강한 피트를 원해요",
+     "description": "",
+     "icon": "fire",
+     "featureEffects": {
+      "smokeIntensity": {
+       "t": 5,
+       "w": 5,
+       "hard": false,
+       "tol": 1
+      },
+      "peatEarthy": {
+       "t": 4,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "smokeAshy": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "finishLength": {
+       "t": 5,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {
+      "peatStance": "max"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 5,
+     "active": true
+    },
+    {
+     "id": "Q9_unsure",
+     "questionId": "Q9",
+     "label": "아직 잘 모르겠어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "smokeIntensity": {
+       "t": 2,
+       "w": 1,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {
+      "peatStance": "unsure"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 6,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q10",
+   "category": "PEAT",
+   "title": "어떤 종류의 연기 향이 가장 끌리나요?",
+   "subtitle": "최대 2개까지 선택할 수 있습니다.",
+   "selectionType": "MULTI",
+   "minSelection": 1,
+   "maxSelection": 2,
+   "orderGroup": 31,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": {
+    "any": [
+     {
+      "optionSelected": [
+       "Q9",
+       "Q9_none"
+      ]
+     },
+     {
+      "optionSelected": [
+       "Q9",
+       "Q9_trace"
+      ]
+     }
+    ]
+   },
+   "coversFeatures": [
+    "coastalBriny",
+    "maritimeSeaweed",
+    "peatEarthy",
+    "peatMedicinal",
+    "smokeAshy",
+    "smokeMeaty",
+    "smokeWoody"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q10_1",
+     "questionId": "Q10",
+     "label": "장작을 태운 모닥불",
+     "description": "",
+     "icon": "fire",
+     "featureEffects": {
+      "smokeWoody": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q10_2",
+     "questionId": "Q10",
+     "label": "숯과 재",
+     "description": "",
+     "icon": "charcoal",
+     "featureEffects": {
+      "smokeAshy": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q10_3",
+     "questionId": "Q10",
+     "label": "바비큐와 훈제 고기",
+     "description": "",
+     "icon": "meat",
+     "featureEffects": {
+      "smokeMeaty": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q10_4",
+     "questionId": "Q10",
+     "label": "흙과 젖은 이끼",
+     "description": "",
+     "icon": "earth",
+     "featureEffects": {
+      "peatEarthy": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    },
+    {
+     "id": "Q10_5",
+     "questionId": "Q10",
+     "label": "바닷바람과 해초가 섞인 연기",
+     "description": "",
+     "icon": "wave",
+     "featureEffects": {
+      "maritimeSeaweed": {
+       "t": 4,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "coastalBriny": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 5,
+     "active": true
+    },
+    {
+     "id": "Q10_6",
+     "questionId": "Q10",
+     "label": "소독약과 요오드",
+     "description": "",
+     "icon": "wave",
+     "featureEffects": {
+      "peatMedicinal": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 6,
+     "active": true
+    },
+    {
+     "id": "Q10_7",
+     "questionId": "Q10",
+     "label": "잘 모르겠어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": true,
+     "displayOrder": 7,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q11",
+   "category": "PEAT",
+   "title": "소독약이나 요오드를 연상시키는 향은 어떤가요?",
+   "subtitle": "아일라 남부 스타일에서 자주 나타나는 특징입니다.",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 32,
+   "isMandatory": true,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "maritimeSeaweed",
+    "peatMedicinal"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q11_hate",
+     "questionId": "Q11",
+     "label": "매우 싫어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "peatMedicinal": {
+       "t": 0,
+       "w": 5,
+       "hard": true,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [
+      {
+       "feature": "peatMedicinal",
+       "maxAllowed": 1
+      }
+     ],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q11_2",
+     "questionId": "Q11",
+     "label": "약하면 괜찮아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "peatMedicinal": {
+       "t": 1,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q11_3",
+     "questionId": "Q11",
+     "label": "어느 정도 좋아해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "peatMedicinal": {
+       "t": 3,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q11_4",
+     "questionId": "Q11",
+     "label": "강할수록 좋아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "peatMedicinal": {
+       "t": 5,
+       "w": 5,
+       "hard": false,
+       "tol": 1
+      },
+      "maritimeSeaweed": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    },
+    {
+     "id": "Q11_5",
+     "questionId": "Q11",
+     "label": "경험해보지 못했어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "peatMedicinal": {
+       "t": 1,
+       "w": 1,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 5,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q12",
+   "category": "PEAT",
+   "title": "스모크가 다른 향을 얼마나 지배하면 좋을까요?",
+   "subtitle": "",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 33,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": {
+    "any": [
+     {
+      "optionSelected": [
+       "Q9",
+       "Q9_none"
+      ]
+     },
+     {
+      "optionSelected": [
+       "Q9",
+       "Q9_trace"
+      ]
+     }
+    ]
+   },
+   "coversFeatures": [
+    "finishLength",
+    "freshOrchardFruit",
+    "smokeIntensity",
+    "stoneFruit",
+    "sweetness"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q12_1",
+     "questionId": "Q12",
+     "label": "뒤에서 살짝만",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "smokeIntensity": {
+       "t": 2,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "freshOrchardFruit": {
+       "t": 3,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q12_2",
+     "questionId": "Q12",
+     "label": "과일과 균형 있게",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "smokeIntensity": {
+       "t": 3,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "stoneFruit": {
+       "t": 3,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q12_3",
+     "questionId": "Q12",
+     "label": "스모크가 중심이되 단맛도 함께",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "smokeIntensity": {
+       "t": 4,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "sweetness": {
+       "t": 3,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q12_4",
+     "questionId": "Q12",
+     "label": "처음부터 끝까지 강하게",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "smokeIntensity": {
+       "t": 5,
+       "w": 5,
+       "hard": false,
+       "tol": 1
+      },
+      "finishLength": {
+       "t": 5,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q13",
+   "category": "PEAT",
+   "title": "달콤한 스모크와 드라이한 스모크 중 어느 쪽인가요?",
+   "subtitle": "",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 34,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": {
+    "any": [
+     {
+      "optionSelected": [
+       "Q9",
+       "Q9_none"
+      ]
+     },
+     {
+      "optionSelected": [
+       "Q9",
+       "Q9_trace"
+      ]
+     }
+    ]
+   },
+   "coversFeatures": [
+    "dryness",
+    "honey",
+    "smokeAshy",
+    "sweetness"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q13_1",
+     "questionId": "Q13",
+     "label": "꿀과 과일이 섞인 달콤한 스모크",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "sweetness": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "honey": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "dryness": {
+       "t": 2,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q13_2",
+     "questionId": "Q13",
+     "label": "균형 잡힌 중간",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "dryness": {
+       "t": 3,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q13_3",
+     "questionId": "Q13",
+     "label": "숯과 재가 느껴지는 드라이한 스모크",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "smokeAshy": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "dryness": {
+       "t": 5,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "sweetness": {
+       "t": 1,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q13_4",
+     "questionId": "Q13",
+     "label": "잘 모르겠어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q14",
+   "category": "SWEET",
+   "title": "위스키의 단맛은 어느 정도가 좋나요?",
+   "subtitle": "",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 40,
+   "isMandatory": true,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "caramelToffee",
+    "driedFruit",
+    "dryness",
+    "honey",
+    "sweetness",
+    "vanilla"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q14_1",
+     "questionId": "Q14",
+     "label": "거의 달지 않은 드라이한 맛",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "sweetness": {
+       "t": 0,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "dryness": {
+       "t": 5,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q14_2",
+     "questionId": "Q14",
+     "label": "은은한 단맛",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "sweetness": {
+       "t": 2,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "dryness": {
+       "t": 3,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q14_3",
+     "questionId": "Q14",
+     "label": "꿀처럼 부드러운 단맛",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "sweetness": {
+       "t": 3,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "honey": {
+       "t": 5,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q14_4",
+     "questionId": "Q14",
+     "label": "캐러멜과 디저트 같은 단맛",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "sweetness": {
+       "t": 4,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "caramelToffee": {
+       "t": 5,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "vanilla": {
+       "t": 4,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    },
+    {
+     "id": "Q14_5",
+     "questionId": "Q14",
+     "label": "건과일처럼 진한 단맛",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "sweetness": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "driedFruit": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 5,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q15",
+   "category": "SWEET",
+   "title": "가장 끌리는 달콤한 향은 무엇인가요?",
+   "subtitle": "최대 2개까지 선택할 수 있습니다.",
+   "selectionType": "MULTI",
+   "minSelection": 1,
+   "maxSelection": 2,
+   "orderGroup": 41,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "caramelToffee",
+    "chocolateCoffee",
+    "driedFruit",
+    "dryness",
+    "honey",
+    "nutty",
+    "sweetness",
+    "vanilla"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q15_1",
+     "questionId": "Q15",
+     "label": "꿀",
+     "description": "",
+     "icon": "honey",
+     "featureEffects": {
+      "honey": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q15_2",
+     "questionId": "Q15",
+     "label": "바닐라",
+     "description": "",
+     "icon": "vanilla",
+     "featureEffects": {
+      "vanilla": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q15_3",
+     "questionId": "Q15",
+     "label": "캐러멜",
+     "description": "",
+     "icon": "caramel",
+     "featureEffects": {
+      "caramelToffee": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q15_4",
+     "questionId": "Q15",
+     "label": "토피",
+     "description": "",
+     "icon": "caramel",
+     "featureEffects": {
+      "caramelToffee": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "nutty": {
+       "t": 3,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    },
+    {
+     "id": "Q15_5",
+     "questionId": "Q15",
+     "label": "초콜릿",
+     "description": "",
+     "icon": "chocolate",
+     "featureEffects": {
+      "chocolateCoffee": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 5,
+     "active": true
+    },
+    {
+     "id": "Q15_6",
+     "questionId": "Q15",
+     "label": "메이플 시럽",
+     "description": "",
+     "icon": "honey",
+     "featureEffects": {
+      "honey": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "caramelToffee": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 6,
+     "active": true
+    },
+    {
+     "id": "Q15_7",
+     "questionId": "Q15",
+     "label": "흑설탕과 당밀",
+     "description": "",
+     "icon": "caramel",
+     "featureEffects": {
+      "caramelToffee": {
+       "t": 5,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "driedFruit": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 7,
+     "active": true
+    },
+    {
+     "id": "Q15_8",
+     "questionId": "Q15",
+     "label": "달콤한 향을 선호하지 않아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "sweetness": {
+       "t": 1,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "dryness": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": true,
+     "displayOrder": 8,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q16",
+   "category": "FRUIT",
+   "title": "어떤 과일 향이 가장 끌리나요?",
+   "subtitle": "최대 2개까지 선택할 수 있습니다.",
+   "selectionType": "MULTI",
+   "minSelection": 1,
+   "maxSelection": 2,
+   "orderGroup": 50,
+   "isMandatory": true,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "cerealMalty",
+    "citrus",
+    "driedFruit",
+    "freshOrchardFruit",
+    "redFruit",
+    "stoneFruit",
+    "tropicalFruit"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q16_orchard",
+     "questionId": "Q16",
+     "label": "사과와 배",
+     "description": "",
+     "icon": "apple",
+     "featureEffects": {
+      "freshOrchardFruit": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q16_citrus",
+     "questionId": "Q16",
+     "label": "레몬과 오렌지",
+     "description": "",
+     "icon": "citrus",
+     "featureEffects": {
+      "citrus": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q16_stone",
+     "questionId": "Q16",
+     "label": "복숭아와 살구",
+     "description": "",
+     "icon": "peach",
+     "featureEffects": {
+      "stoneFruit": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q16_tropical",
+     "questionId": "Q16",
+     "label": "파인애플과 망고",
+     "description": "",
+     "icon": "tropical",
+     "featureEffects": {
+      "tropicalFruit": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    },
+    {
+     "id": "Q16_red",
+     "questionId": "Q16",
+     "label": "딸기와 체리",
+     "description": "",
+     "icon": "redfruit",
+     "featureEffects": {
+      "redFruit": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 5,
+     "active": true
+    },
+    {
+     "id": "Q16_grape",
+     "questionId": "Q16",
+     "label": "포도와 자두",
+     "description": "",
+     "icon": "redfruit",
+     "featureEffects": {
+      "redFruit": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "driedFruit": {
+       "t": 3,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 6,
+     "active": true
+    },
+    {
+     "id": "Q16_dried",
+     "questionId": "Q16",
+     "label": "건포도와 무화과",
+     "description": "",
+     "icon": "driedfruit",
+     "featureEffects": {
+      "driedFruit": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 7,
+     "active": true
+    },
+    {
+     "id": "Q16_none",
+     "questionId": "Q16",
+     "label": "과일 향을 선호하지 않아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "freshOrchardFruit": {
+       "t": 1,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      },
+      "tropicalFruit": {
+       "t": 1,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      },
+      "cerealMalty": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": true,
+     "displayOrder": 8,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q17",
+   "category": "FRUIT",
+   "title": "사과와 배 같은 산뜻한 과일 향은 어떤가요?",
+   "subtitle": "",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 51,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": {
+    "any": [
+     {
+      "optionSelected": [
+       "Q16",
+       "Q16_orchard"
+      ]
+     },
+     {
+      "optionSelected": [
+       "Q16",
+       "Q16_none"
+      ]
+     }
+    ]
+   },
+   "coversFeatures": [
+    "freshOrchardFruit"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q17_1",
+     "questionId": "Q17",
+     "label": "매우 좋아해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "freshOrchardFruit": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q17_2",
+     "questionId": "Q17",
+     "label": "어느 정도 좋아해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "freshOrchardFruit": {
+       "t": 3,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q17_3",
+     "questionId": "Q17",
+     "label": "상관없어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "freshOrchardFruit": {
+       "t": 2,
+       "w": 1,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q17_4",
+     "questionId": "Q17",
+     "label": "별로 좋아하지 않아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "freshOrchardFruit": {
+       "t": 1,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q18",
+   "category": "FRUIT",
+   "title": "레몬과 오렌지 같은 상큼한 향은 어떤가요?",
+   "subtitle": "",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 52,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": {
+    "any": [
+     {
+      "optionSelected": [
+       "Q16",
+       "Q16_citrus"
+      ]
+     },
+     {
+      "optionSelected": [
+       "Q16",
+       "Q16_none"
+      ]
+     }
+    ]
+   },
+   "coversFeatures": [
+    "citrus"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q18_1",
+     "questionId": "Q18",
+     "label": "선명하고 상큼한 맛을 원해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "citrus": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q18_2",
+     "questionId": "Q18",
+     "label": "은은하게 있으면 좋아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "citrus": {
+       "t": 3,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q18_3",
+     "questionId": "Q18",
+     "label": "상관없어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "citrus": {
+       "t": 2,
+       "w": 1,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q18_4",
+     "questionId": "Q18",
+     "label": "시트러스 향은 싫어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "citrus": {
+       "t": 0,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q19",
+   "category": "FRUIT",
+   "title": "파인애플, 망고, 바나나 같은 열대과일 향은 어떤가요?",
+   "subtitle": "",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 53,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": {
+    "any": [
+     {
+      "optionSelected": [
+       "Q16",
+       "Q16_tropical"
+      ]
+     },
+     {
+      "optionSelected": [
+       "Q16",
+       "Q16_none"
+      ]
+     }
+    ]
+   },
+   "coversFeatures": [
+    "tropicalFruit"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q19_1",
+     "questionId": "Q19",
+     "label": "매우 좋아해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "tropicalFruit": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q19_2",
+     "questionId": "Q19",
+     "label": "약하게 있으면 좋아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "tropicalFruit": {
+       "t": 3,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q19_3",
+     "questionId": "Q19",
+     "label": "상관없어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "tropicalFruit": {
+       "t": 2,
+       "w": 1,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q19_4",
+     "questionId": "Q19",
+     "label": "선호하지 않아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "tropicalFruit": {
+       "t": 1,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q20",
+   "category": "FRUIT",
+   "title": "건포도, 대추야자, 무화과 같은 건과일 향은 어떤가요?",
+   "subtitle": "",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 54,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": {
+    "any": [
+     {
+      "optionSelected": [
+       "Q16",
+       "Q16_dried"
+      ]
+     },
+     {
+      "optionSelected": [
+       "Q16",
+       "Q16_none"
+      ]
+     }
+    ]
+   },
+   "coversFeatures": [
+    "driedFruit",
+    "olorosoSherry"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q20_1",
+     "questionId": "Q20",
+     "label": "매우 진하게 느끼고 싶어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "driedFruit": {
+       "t": 5,
+       "w": 5,
+       "hard": false,
+       "tol": 1
+      },
+      "olorosoSherry": {
+       "t": 5,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q20_2",
+     "questionId": "Q20",
+     "label": "어느 정도 좋아해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "driedFruit": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q20_3",
+     "questionId": "Q20",
+     "label": "약하게만 원해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "driedFruit": {
+       "t": 2,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q20_4",
+     "questionId": "Q20",
+     "label": "선호하지 않아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "driedFruit": {
+       "t": 0,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q21",
+   "category": "FRUIT",
+   "title": "체리, 베리, 포도주 같은 붉은 과일 향은 어떤가요?",
+   "subtitle": "",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 55,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": {
+    "any": [
+     {
+      "optionSelected": [
+       "Q16",
+       "Q16_red"
+      ]
+     },
+     {
+      "optionSelected": [
+       "Q16",
+       "Q16_none"
+      ]
+     }
+    ]
+   },
+   "coversFeatures": [
+    "port",
+    "redFruit",
+    "redWine"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q21_1",
+     "questionId": "Q21",
+     "label": "체리와 베리를 좋아해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "redFruit": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q21_2",
+     "questionId": "Q21",
+     "label": "포도와 와인 향을 좋아해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "redFruit": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "redWine": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "port": {
+       "t": 3,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q21_3",
+     "questionId": "Q21",
+     "label": "약하게 있으면 괜찮아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "redFruit": {
+       "t": 2,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q21_4",
+     "questionId": "Q21",
+     "label": "와인 같은 향은 싫어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "redFruit": {
+       "t": 1,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "redWine": {
+       "t": 0,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "port": {
+       "t": 0,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q22",
+   "category": "FLORAL",
+   "title": "꽃이나 향수처럼 화사한 향은 어떤가요?",
+   "subtitle": "",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 60,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "floral"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q22_1",
+     "questionId": "Q22",
+     "label": "매우 좋아해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "floral": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q22_2",
+     "questionId": "Q22",
+     "label": "은은한 정도가 좋아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "floral": {
+       "t": 3,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q22_3",
+     "questionId": "Q22",
+     "label": "상관없어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "floral": {
+       "t": 2,
+       "w": 1,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q22_4",
+     "questionId": "Q22",
+     "label": "향수 같은 향은 싫어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "floral": {
+       "t": 0,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q23",
+   "category": "FLORAL",
+   "title": "풀, 허브, 녹차 같은 산뜻한 향은 어떤가요?",
+   "subtitle": "",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 61,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "herbalGrassy"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q23_1",
+     "questionId": "Q23",
+     "label": "신선하고 풋풋한 향을 좋아해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "herbalGrassy": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q23_2",
+     "questionId": "Q23",
+     "label": "약하게 있으면 좋아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "herbalGrassy": {
+       "t": 3,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q23_3",
+     "questionId": "Q23",
+     "label": "상관없어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "herbalGrassy": {
+       "t": 2,
+       "w": 1,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q23_4",
+     "questionId": "Q23",
+     "label": "풋내는 싫어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "herbalGrassy": {
+       "t": 0,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q24",
+   "category": "CEREAL",
+   "title": "다음 중 가장 끌리는 향은 무엇인가요?",
+   "subtitle": "",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 62,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "cerealMalty",
+    "chocolateCoffee",
+    "creamy",
+    "nutty",
+    "toastedOak"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q24_1",
+     "questionId": "Q24",
+     "label": "갓 구운 빵과 비스킷",
+     "description": "",
+     "icon": "cereal",
+     "featureEffects": {
+      "cerealMalty": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q24_2",
+     "questionId": "Q24",
+     "label": "아몬드와 헤이즐넛",
+     "description": "",
+     "icon": "nut",
+     "featureEffects": {
+      "nutty": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q24_3",
+     "questionId": "Q24",
+     "label": "버터와 크림",
+     "description": "",
+     "icon": "cream",
+     "featureEffects": {
+      "creamy": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q24_4",
+     "questionId": "Q24",
+     "label": "커피와 다크초콜릿",
+     "description": "",
+     "icon": "chocolate",
+     "featureEffects": {
+      "chocolateCoffee": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    },
+    {
+     "id": "Q24_5",
+     "questionId": "Q24",
+     "label": "구운 곡물과 몰트",
+     "description": "",
+     "icon": "cereal",
+     "featureEffects": {
+      "cerealMalty": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "toastedOak": {
+       "t": 3,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 5,
+     "active": true
+    },
+    {
+     "id": "Q24_6",
+     "questionId": "Q24",
+     "label": "이런 향은 중요하지 않아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": true,
+     "displayOrder": 6,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q25",
+   "category": "CASK",
+   "title": "바닐라, 코코넛, 캐러멜이 중심인 맛은 어떤가요?",
+   "subtitle": "버번 캐스크(미국산 오크) 숙성에서 자주 나타나는 특징입니다.",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 70,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "caramelToffee",
+    "exBourbon",
+    "vanilla"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q25_1",
+     "questionId": "Q25",
+     "label": "매우 좋아해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "vanilla": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "exBourbon": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "caramelToffee": {
+       "t": 4,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q25_2",
+     "questionId": "Q25",
+     "label": "어느 정도 좋아해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "vanilla": {
+       "t": 3,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "exBourbon": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q25_3",
+     "questionId": "Q25",
+     "label": "상관없어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "exBourbon": {
+       "t": 3,
+       "w": 1,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q25_4",
+     "questionId": "Q25",
+     "label": "선호하지 않아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "vanilla": {
+       "t": 1,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "exBourbon": {
+       "t": 1,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q26",
+   "category": "CASK",
+   "title": "건포도, 무화과, 견과, 계피가 중심인 진한 맛은 어떤가요?",
+   "subtitle": "셰리 캐스크(스페인 셰리 와인 통) 숙성에서 자주 나타나는 특징입니다.",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 71,
+   "isMandatory": true,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "driedFruit",
+    "nutty",
+    "olorosoSherry",
+    "pxSherry",
+    "sweetSpice"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q26_love",
+     "questionId": "Q26",
+     "label": "매우 좋아해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "driedFruit": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "olorosoSherry": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "pxSherry": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "sweetSpice": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "nutty": {
+       "t": 4,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q26_like",
+     "questionId": "Q26",
+     "label": "어느 정도 좋아해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "driedFruit": {
+       "t": 3,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "olorosoSherry": {
+       "t": 3,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q26_light",
+     "questionId": "Q26",
+     "label": "약하게만 원해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "driedFruit": {
+       "t": 2,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "olorosoSherry": {
+       "t": 2,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q26_no",
+     "questionId": "Q26",
+     "label": "선호하지 않아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "driedFruit": {
+       "t": 0,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "olorosoSherry": {
+       "t": 0,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "pxSherry": {
+       "t": 0,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q27",
+   "category": "CASK",
+   "title": "체리, 베리, 와인 같은 붉은 과일 풍미는 어떤가요?",
+   "subtitle": "포트·레드와인 캐스크 피니시에서 자주 나타납니다.",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 72,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "port",
+    "redFruit",
+    "redWine"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q27_1",
+     "questionId": "Q27",
+     "label": "매우 좋아해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "redFruit": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "port": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "redWine": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q27_2",
+     "questionId": "Q27",
+     "label": "약하게 있으면 좋아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "redFruit": {
+       "t": 3,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "port": {
+       "t": 3,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q27_3",
+     "questionId": "Q27",
+     "label": "상관없어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "redFruit": {
+       "t": 2,
+       "w": 1,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q27_4",
+     "questionId": "Q27",
+     "label": "선호하지 않아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "port": {
+       "t": 0,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "redWine": {
+       "t": 0,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q28",
+   "category": "CASK",
+   "title": "당밀, 바나나, 갈색 설탕 같은 럼 캐스크 풍미는 어떤가요?",
+   "subtitle": "",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 73,
+   "isMandatory": false,
+   "minimumExperienceLevel": 3,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "rum",
+    "tropicalFruit"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q28_1",
+     "questionId": "Q28",
+     "label": "매우 좋아해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "rum": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "tropicalFruit": {
+       "t": 4,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q28_2",
+     "questionId": "Q28",
+     "label": "한번 도전해보고 싶어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "rum": {
+       "t": 4,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q28_3",
+     "questionId": "Q28",
+     "label": "상관없어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "rum": {
+       "t": 2,
+       "w": 1,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q28_4",
+     "questionId": "Q28",
+     "label": "선호하지 않아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "rum": {
+       "t": 0,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q29",
+   "category": "CASK",
+   "title": "새 나무, 토스트, 강한 향신료가 느껴지는 오크 풍미는 어떤가요?",
+   "subtitle": "",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 74,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "oakTannin",
+    "toastedOak",
+    "virginOak"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q29_1",
+     "questionId": "Q29",
+     "label": "강한 오크를 좋아해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "oakTannin": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "virginOak": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "toastedOak": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q29_2",
+     "questionId": "Q29",
+     "label": "적당한 정도가 좋아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "oakTannin": {
+       "t": 3,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q29_3",
+     "questionId": "Q29",
+     "label": "아주 약하게만 원해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "oakTannin": {
+       "t": 1,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q29_hate",
+     "questionId": "Q29",
+     "label": "떫고 나무 같은 맛은 싫어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "oakTannin": {
+       "t": 0,
+       "w": 5,
+       "hard": false,
+       "tol": 1
+      },
+      "virginOak": {
+       "t": 0,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [
+      {
+       "feature": "oakTannin",
+       "maxAllowed": 4,
+       "penaltyOnly": true
+      }
+     ],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q30",
+   "category": "CASK",
+   "title": "선호하는 캐스크가 있나요?",
+   "subtitle": "최대 2개까지 선택할 수 있습니다.",
+   "selectionType": "MULTI",
+   "minSelection": 1,
+   "maxSelection": 2,
+   "orderGroup": 75,
+   "isMandatory": false,
+   "minimumExperienceLevel": 4,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "exBourbon",
+    "mixedCask",
+    "olorosoSherry",
+    "port",
+    "pxSherry",
+    "redWine",
+    "rum",
+    "virginOak",
+    "whiteWine"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q30_1",
+     "questionId": "Q30",
+     "label": "Ex-bourbon",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "exBourbon": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q30_2",
+     "questionId": "Q30",
+     "label": "Oloroso sherry",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "olorosoSherry": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q30_3",
+     "questionId": "Q30",
+     "label": "PX sherry",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "pxSherry": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q30_4",
+     "questionId": "Q30",
+     "label": "Port",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "port": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    },
+    {
+     "id": "Q30_5",
+     "questionId": "Q30",
+     "label": "Red wine",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "redWine": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 5,
+     "active": true
+    },
+    {
+     "id": "Q30_6",
+     "questionId": "Q30",
+     "label": "White wine",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "whiteWine": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 6,
+     "active": true
+    },
+    {
+     "id": "Q30_7",
+     "questionId": "Q30",
+     "label": "Rum",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "rum": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 7,
+     "active": true
+    },
+    {
+     "id": "Q30_8",
+     "questionId": "Q30",
+     "label": "Virgin oak",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "virginOak": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 8,
+     "active": true
+    },
+    {
+     "id": "Q30_9",
+     "questionId": "Q30",
+     "label": "다양한 캐스크 조합",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "mixedCask": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 9,
+     "active": true
+    },
+    {
+     "id": "Q30_10",
+     "questionId": "Q30",
+     "label": "특별한 선호 없음",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": true,
+     "displayOrder": 10,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q31",
+   "category": "BODY",
+   "title": "입안에서 느껴지는 무게는 어느 정도가 좋나요?",
+   "subtitle": "",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 80,
+   "isMandatory": true,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "body",
+    "creamy",
+    "oily",
+    "waxy"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q31_1",
+     "questionId": "Q31",
+     "label": "물처럼 가볍고 깨끗하게",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "body": {
+       "t": 1,
+       "w": 5,
+       "hard": false,
+       "tol": 1
+      },
+      "oily": {
+       "t": 1,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q31_2",
+     "questionId": "Q31",
+     "label": "부드럽고 실키하게",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "body": {
+       "t": 2,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "creamy": {
+       "t": 3,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q31_3",
+     "questionId": "Q31",
+     "label": "크리미하게",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "body": {
+       "t": 3,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "creamy": {
+       "t": 5,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q31_4",
+     "questionId": "Q31",
+     "label": "묵직하고 풍부하게",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "body": {
+       "t": 4,
+       "w": 5,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    },
+    {
+     "id": "Q31_5",
+     "questionId": "Q31",
+     "label": "오일처럼 진하고 두껍게",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "body": {
+       "t": 5,
+       "w": 5,
+       "hard": false,
+       "tol": 1
+      },
+      "oily": {
+       "t": 5,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "waxy": {
+       "t": 4,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 5,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q32",
+   "category": "BODY",
+   "title": "기름지고 왁시한 질감은 어떤가요?",
+   "subtitle": "밀랍이나 기름을 만졌을 때처럼 입안을 감싸는 질감입니다.",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 81,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "oily",
+    "waxy"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q32_1",
+     "questionId": "Q32",
+     "label": "매우 좋아해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "waxy": {
+       "t": 5,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "oily": {
+       "t": 5,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q32_2",
+     "questionId": "Q32",
+     "label": "어느 정도 좋아해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "waxy": {
+       "t": 3,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "oily": {
+       "t": 3,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q32_3",
+     "questionId": "Q32",
+     "label": "상관없어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "waxy": {
+       "t": 2,
+       "w": 1,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q32_4",
+     "questionId": "Q32",
+     "label": "깔끔한 질감을 더 좋아해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "waxy": {
+       "t": 0,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "oily": {
+       "t": 1,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q33",
+   "category": "FINISH",
+   "title": "마신 뒤 맛이 얼마나 오래 남으면 좋나요?",
+   "subtitle": "",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 82,
+   "isMandatory": true,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "complexity",
+    "finishLength"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q33_1",
+     "questionId": "Q33",
+     "label": "짧고 깔끔하게",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "finishLength": {
+       "t": 1,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q33_2",
+     "questionId": "Q33",
+     "label": "중간 정도",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "finishLength": {
+       "t": 3,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q33_long",
+     "questionId": "Q33",
+     "label": "길고 은은하게",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "finishLength": {
+       "t": 4,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q33_verylong",
+     "questionId": "Q33",
+     "label": "매우 길고 강렬하게",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "finishLength": {
+       "t": 5,
+       "w": 5,
+       "hard": false,
+       "tol": 1
+      },
+      "complexity": {
+       "t": 4,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q34",
+   "category": "FINISH",
+   "title": "피니시는 어떤 방향이 좋나요?",
+   "subtitle": "",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 83,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "drySpice",
+    "dryness",
+    "finishLength",
+    "freshOrchardFruit",
+    "honey",
+    "oakTannin",
+    "smokeIntensity",
+    "stoneFruit",
+    "sweetSpice",
+    "sweetness"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q34_1",
+     "questionId": "Q34",
+     "label": "달콤하게",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "sweetness": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "honey": {
+       "t": 4,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q34_2",
+     "questionId": "Q34",
+     "label": "과일 향이 남도록",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "stoneFruit": {
+       "t": 4,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      },
+      "freshOrchardFruit": {
+       "t": 4,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q34_3",
+     "questionId": "Q34",
+     "label": "향신료가 남도록",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "sweetSpice": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "drySpice": {
+       "t": 4,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q34_4",
+     "questionId": "Q34",
+     "label": "나무와 드라이함이 남도록",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "oakTannin": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "dryness": {
+       "t": 5,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    },
+    {
+     "id": "Q34_5",
+     "questionId": "Q34",
+     "label": "스모크가 오래 남도록",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "smokeIntensity": {
+       "t": 4,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "finishLength": {
+       "t": 5,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 5,
+     "active": true
+    },
+    {
+     "id": "Q34_6",
+     "questionId": "Q34",
+     "label": "깔끔하게 사라지도록",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "finishLength": {
+       "t": 1,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "dryness": {
+       "t": 3,
+       "w": 1,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 6,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q35",
+   "category": "ABV",
+   "title": "높은 도수의 강한 느낌은 어느 정도 괜찮나요?",
+   "subtitle": "",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 90,
+   "isMandatory": true,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "alcoholIntensity"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q35_soft",
+     "questionId": "Q35",
+     "label": "최대한 부드러운 위스키",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "alcoholIntensity": {
+       "t": 1,
+       "w": 5,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {
+      "maxAbv": 43.0
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q35_std",
+     "questionId": "Q35",
+     "label": "일반적인 40~46%",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "alcoholIntensity": {
+       "t": 2,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {
+      "maxAbv": 46.5
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q35_3",
+     "questionId": "Q35",
+     "label": "46~50%도 괜찮아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "alcoholIntensity": {
+       "t": 3,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {
+      "maxAbv": 50.5
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q35_4",
+     "questionId": "Q35",
+     "label": "50% 이상의 강한 위스키도 좋아해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "alcoholIntensity": {
+       "t": 5,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {
+      "maxAbv": 70.0
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    },
+    {
+     "id": "Q35_5",
+     "questionId": "Q35",
+     "label": "물을 넣어 조절할 수 있다면 상관없어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "alcoholIntensity": {
+       "t": 3,
+       "w": 1,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {
+      "maxAbv": 70.0,
+      "waterOk": true
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 5,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q36",
+   "category": "ABV",
+   "title": "알코올의 따뜻하고 매운 자극은 어떤가요?",
+   "subtitle": "",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 91,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "alcoholIntensity",
+    "drySpice"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q36_1",
+     "questionId": "Q36",
+     "label": "거의 없어야 해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "alcoholIntensity": {
+       "t": 1,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "drySpice": {
+       "t": 1,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q36_2",
+     "questionId": "Q36",
+     "label": "조금은 괜찮아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "alcoholIntensity": {
+       "t": 2,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q36_3",
+     "questionId": "Q36",
+     "label": "적당한 자극을 좋아해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "alcoholIntensity": {
+       "t": 3,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "drySpice": {
+       "t": 3,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q36_4",
+     "questionId": "Q36",
+     "label": "강한 자극도 즐겨요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "alcoholIntensity": {
+       "t": 5,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      },
+      "drySpice": {
+       "t": 4,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q37",
+   "category": "SERVE",
+   "title": "주로 어떻게 마실 예정인가요?",
+   "subtitle": "",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 100,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q37_1",
+     "questionId": "Q37",
+     "label": "스트레이트",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "serve": "neat"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q37_2",
+     "questionId": "Q37",
+     "label": "물을 몇 방울 넣어서",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "serve": "water"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q37_3",
+     "questionId": "Q37",
+     "label": "온더록",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "serve": "rocks"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q37_4",
+     "questionId": "Q37",
+     "label": "하이볼",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "serve": "highball"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    },
+    {
+     "id": "Q37_5",
+     "questionId": "Q37",
+     "label": "여러 방식으로",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "serve": "mixed"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 5,
+     "active": true
+    },
+    {
+     "id": "Q37_6",
+     "questionId": "Q37",
+     "label": "아직 모르겠어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "serve": "unknown"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 6,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q38",
+   "category": "SERVE",
+   "title": "언제 마실 위스키를 찾고 있나요?",
+   "subtitle": "",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 101,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "body"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q38_1",
+     "questionId": "Q38",
+     "label": "식사 전에 가볍게",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "body": {
+       "t": 2,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {
+      "occasion": "aperitif"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q38_2",
+     "questionId": "Q38",
+     "label": "식사와 함께",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "occasion": "withMeal"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q38_3",
+     "questionId": "Q38",
+     "label": "식사 후 천천히",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "body": {
+       "t": 4,
+       "w": 2,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {
+      "occasion": "digestif"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q38_4",
+     "questionId": "Q38",
+     "label": "혼자 조용히",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "occasion": "quiet"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    },
+    {
+     "id": "Q38_5",
+     "questionId": "Q38",
+     "label": "친구들과 편하게",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "occasion": "social"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 5,
+     "active": true
+    },
+    {
+     "id": "Q38_6",
+     "questionId": "Q38",
+     "label": "특별한 날",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "occasion": "special"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 6,
+     "active": true
+    },
+    {
+     "id": "Q38_7",
+     "questionId": "Q38",
+     "label": "선물용",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "occasion": "gift",
+      "giftWeight": 4
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 7,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q39",
+   "category": "SERVE",
+   "title": "함께 먹을 음식이 있다면 무엇인가요?",
+   "subtitle": "",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 102,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q39_1",
+     "questionId": "Q39",
+     "label": "특별한 음식 없음",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "food": "none"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q39_2",
+     "questionId": "Q39",
+     "label": "해산물",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "food": "seafood"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q39_3",
+     "questionId": "Q39",
+     "label": "육류와 바비큐",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "food": "meat"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q39_4",
+     "questionId": "Q39",
+     "label": "치즈",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "food": "cheese"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    },
+    {
+     "id": "Q39_5",
+     "questionId": "Q39",
+     "label": "초콜릿과 디저트",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "food": "dessert"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 5,
+     "active": true
+    },
+    {
+     "id": "Q39_6",
+     "questionId": "Q39",
+     "label": "견과와 말린 과일",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "food": "nuts"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 6,
+     "active": true
+    },
+    {
+     "id": "Q39_7",
+     "questionId": "Q39",
+     "label": "가벼운 안주",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "food": "light"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 7,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q40",
+   "category": "BUDGET",
+   "title": "생각하는 가격대는 어느 정도인가요?",
+   "subtitle": "가격 구간은 관리자 설정에서 변경할 수 있습니다.",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 110,
+   "isMandatory": true,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q40_1",
+     "questionId": "Q40",
+     "label": "10만 원 미만",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "budgetBand": "A"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q40_2",
+     "questionId": "Q40",
+     "label": "10만~20만 원",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "budgetBand": "B"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q40_3",
+     "questionId": "Q40",
+     "label": "20만~40만 원",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "budgetBand": "C"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q40_4",
+     "questionId": "Q40",
+     "label": "40만 원 이상",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "budgetBand": "D"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    },
+    {
+     "id": "Q40_5",
+     "questionId": "Q40",
+     "label": "가격보다 취향이 중요해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "budgetBand": "ANY"
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 5,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q41",
+   "category": "BUDGET",
+   "title": "쉽게 구할 수 있는 제품이 중요한가요?",
+   "subtitle": "",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 111,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q41_1",
+     "questionId": "Q41",
+     "label": "국내에서 쉽게 구할 수 있어야 해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "availabilityImportance": 5
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q41_2",
+     "questionId": "Q41",
+     "label": "조금 찾아봐도 괜찮아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "availabilityImportance": 3
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q41_3",
+     "questionId": "Q41",
+     "label": "한정판이나 희귀 제품도 좋아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "availabilityImportance": 1,
+      "rarityPreference": 4
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q41_4",
+     "questionId": "Q41",
+     "label": "구매 가능 여부는 중요하지 않아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "availabilityImportance": 0
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q42",
+   "category": "BUDGET",
+   "title": "익숙한 브랜드와 새로운 브랜드 중 어느 쪽인가요?",
+   "subtitle": "",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 112,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "complexity"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q42_1",
+     "questionId": "Q42",
+     "label": "유명하고 실패 가능성이 낮은 브랜드",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "popularityPreference": 5,
+      "noveltyWeight": 0
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q42_2",
+     "questionId": "Q42",
+     "label": "어느 정도 알려진 브랜드",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "popularityPreference": 3
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q42_3",
+     "questionId": "Q42",
+     "label": "잘 알려지지 않은 브랜드",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "popularityPreference": 1,
+      "noveltyWeight": 3
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q42_4",
+     "questionId": "Q42",
+     "label": "독특하고 실험적인 브랜드",
+     "description": "",
+     "icon": "",
+     "featureEffects": {
+      "complexity": {
+       "t": 5,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {
+      "popularityPreference": 0,
+      "noveltyWeight": 5
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    },
+    {
+     "id": "Q42_5",
+     "questionId": "Q42",
+     "label": "상관없어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "popularityPreference": 2
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 5,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q43",
+   "category": "BUDGET",
+   "title": "연산 표기가 중요한가요?",
+   "subtitle": "",
+   "selectionType": "SINGLE",
+   "minSelection": 1,
+   "maxSelection": 1,
+   "orderGroup": 113,
+   "isMandatory": false,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q43_1",
+     "questionId": "Q43",
+     "label": "10년 이상 연산 표기를 원해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "minAge": 10
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q43_2",
+     "questionId": "Q43",
+     "label": "15년 이상을 선호해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "minAge": 15
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q43_3",
+     "questionId": "Q43",
+     "label": "연산이 없어도 맛이 좋으면 괜찮아요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "minAge": 0
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q43_4",
+     "questionId": "Q43",
+     "label": "연산보다 희소성이 중요해요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "minAge": 0,
+      "rarityPreference": 4
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    },
+    {
+     "id": "Q43_5",
+     "questionId": "Q43",
+     "label": "상관없어요",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {
+      "minAge": 0
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 5,
+     "active": true
+    }
+   ]
+  },
+  {
+   "id": "Q44",
+   "category": "AVOID",
+   "title": "특별히 피하고 싶은 향을 최종 확인해 주세요.",
+   "subtitle": "여기서 선택한 항목은 추천에서 가장 강하게 반영됩니다.",
+   "selectionType": "MULTI",
+   "minSelection": 1,
+   "maxSelection": 10,
+   "orderGroup": 120,
+   "isMandatory": true,
+   "minimumExperienceLevel": 0,
+   "maximumExperienceLevel": 5,
+   "displayCondition": null,
+   "skipCondition": null,
+   "coversFeatures": [
+    "alcoholIntensity",
+    "coastalBriny",
+    "driedFruit",
+    "drySpice",
+    "floral",
+    "maritimeSeaweed",
+    "oakTannin",
+    "oily",
+    "peatMedicinal",
+    "pxSherry",
+    "smokeIntensity",
+    "sweetness",
+    "waxy"
+   ],
+   "tags": [],
+   "active": true,
+   "version": 1,
+   "options": [
+    {
+     "id": "Q44_peat",
+     "questionId": "Q44",
+     "label": "피트와 스모크",
+     "description": "",
+     "icon": "smoke",
+     "featureEffects": {
+      "smokeIntensity": {
+       "t": 0,
+       "w": 5,
+       "hard": true,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [
+      {
+       "feature": "smokeIntensity",
+       "maxAllowed": 1
+      }
+     ],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 1,
+     "active": true
+    },
+    {
+     "id": "Q44_med",
+     "questionId": "Q44",
+     "label": "소독약과 요오드",
+     "description": "",
+     "icon": "wave",
+     "featureEffects": {
+      "peatMedicinal": {
+       "t": 0,
+       "w": 5,
+       "hard": true,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [
+      {
+       "feature": "peatMedicinal",
+       "maxAllowed": 1
+      }
+     ],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 2,
+     "active": true
+    },
+    {
+     "id": "Q44_sea",
+     "questionId": "Q44",
+     "label": "해초와 짠맛",
+     "description": "",
+     "icon": "wave",
+     "featureEffects": {
+      "maritimeSeaweed": {
+       "t": 0,
+       "w": 5,
+       "hard": false,
+       "tol": 1
+      },
+      "coastalBriny": {
+       "t": 1,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [
+      {
+       "feature": "maritimeSeaweed",
+       "maxAllowed": 2
+      }
+     ],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 3,
+     "active": true
+    },
+    {
+     "id": "Q44_floral",
+     "questionId": "Q44",
+     "label": "꽃과 향수",
+     "description": "",
+     "icon": "flower",
+     "featureEffects": {
+      "floral": {
+       "t": 0,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 4,
+     "active": true
+    },
+    {
+     "id": "Q44_sweet",
+     "questionId": "Q44",
+     "label": "강한 단맛",
+     "description": "",
+     "icon": "honey",
+     "featureEffects": {
+      "sweetness": {
+       "t": 1,
+       "w": 5,
+       "hard": false,
+       "tol": 1
+      },
+      "pxSherry": {
+       "t": 0,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 5,
+     "active": true
+    },
+    {
+     "id": "Q44_dried",
+     "questionId": "Q44",
+     "label": "건과일",
+     "description": "",
+     "icon": "driedfruit",
+     "featureEffects": {
+      "driedFruit": {
+       "t": 0,
+       "w": 5,
+       "hard": false,
+       "tol": 1
+      },
+      "pxSherry": {
+       "t": 0,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 6,
+     "active": true
+    },
+    {
+     "id": "Q44_spice",
+     "questionId": "Q44",
+     "label": "강한 향신료",
+     "description": "",
+     "icon": "spice",
+     "featureEffects": {
+      "drySpice": {
+       "t": 0,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 7,
+     "active": true
+    },
+    {
+     "id": "Q44_oak",
+     "questionId": "Q44",
+     "label": "떫은 오크",
+     "description": "",
+     "icon": "oak",
+     "featureEffects": {
+      "oakTannin": {
+       "t": 0,
+       "w": 5,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [
+      {
+       "feature": "oakTannin",
+       "maxAllowed": 4,
+       "penaltyOnly": true
+      }
+     ],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 8,
+     "active": true
+    },
+    {
+     "id": "Q44_oily",
+     "questionId": "Q44",
+     "label": "기름진 질감",
+     "description": "",
+     "icon": "cask",
+     "featureEffects": {
+      "oily": {
+       "t": 0,
+       "w": 4,
+       "hard": false,
+       "tol": 1
+      },
+      "waxy": {
+       "t": 0,
+       "w": 3,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 9,
+     "active": true
+    },
+    {
+     "id": "Q44_abv",
+     "questionId": "Q44",
+     "label": "높은 도수",
+     "description": "",
+     "icon": "fire",
+     "featureEffects": {
+      "alcoholIntensity": {
+       "t": 1,
+       "w": 5,
+       "hard": false,
+       "tol": 1
+      }
+     },
+     "flags": {
+      "maxAbv": 46.5
+     },
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": false,
+     "displayOrder": 10,
+     "active": true
+    },
+    {
+     "id": "Q44_none",
+     "questionId": "Q44",
+     "label": "특별히 없음",
+     "description": "",
+     "icon": "",
+     "featureEffects": {},
+     "flags": {},
+     "exclusionEffects": [],
+     "branchTarget": "",
+     "exclusive": true,
+     "displayOrder": 11,
+     "active": true
+    }
+   ]
+  }
+ ]
+}
