@@ -715,6 +715,12 @@ function priceLabel(code) {
   return i >= 0 ? priceLabels[i] : PRICE_DEFAULTS[PRICE_DEFAULTS.length - 1].label;
 }
 
+/* 예산 질문의 선택지는 관리자가 정한 가격 구간 이름을 따른다. */
+function optionLabel(option) {
+  const band = option.flags && option.flags.budgetBand;
+  return band && PRICE_ORDER.indexOf(band) >= 0 ? priceLabel(band) : option.label;
+}
+
 const UPCOMING_STATUSES = new Set([
   'MATURING', 'MATURING_UNRELEASED', 'FIRST_RELEASE_PREORDER',
   'PRODUCTION_UNCONFIRMED', 'UNKNOWN',
@@ -2012,7 +2018,7 @@ function advance(engine, q, state) {
   return { state: next, next: r };
 }
 
-return { FLAVOR, CASK, USE, ALL, SIZE, indexOf, useIndexOf, GROUP_CORE, GROUP_PEAT_TEXTURE, GROUP_CASK, CHART_AXES, featureLabel, Availability, PRICE_ORDER, PRICE_DEFAULTS, setPriceLabels, priceLabel, parseBrands, brandValue, useValue, parseQuestions, BRAND_RATINGS, TasteVector, PROFILES, classifyProfiles, classifyBrandProfile, flavorTags, DEFAULT_WEIGHTS, DEFAULT_OPTIONS, ROLES, RecommendationEngine, similarity, reasonsFor, servingAdvice, varianceNotice, emptyAnswerState, cloneAnswerState, AdaptiveQuestionEngine, applySelection, canProceed, advance };
+return { FLAVOR, CASK, USE, ALL, SIZE, indexOf, useIndexOf, GROUP_CORE, GROUP_PEAT_TEXTURE, GROUP_CASK, CHART_AXES, featureLabel, Availability, PRICE_ORDER, PRICE_DEFAULTS, setPriceLabels, priceLabel, optionLabel, parseBrands, brandValue, useValue, parseQuestions, BRAND_RATINGS, TasteVector, PROFILES, classifyProfiles, classifyBrandProfile, flavorTags, DEFAULT_WEIGHTS, DEFAULT_OPTIONS, ROLES, RecommendationEngine, similarity, reasonsFor, servingAdvice, varianceNotice, emptyAnswerState, cloneAnswerState, AdaptiveQuestionEngine, applySelection, canProceed, advance };
 })();
 var __MSM_ADMIN = (function () {
 var ENG = __MSM_ENG;
@@ -3498,7 +3504,7 @@ function viewQuiz() {
       <div class="glass clickable opt${sel.includes(o.id) ? ' sel' : ''}" data-a="opt" data-i="${i}">
         ${o.icon ? `<span class="ficon">${iconSvg(o.icon)}</span>` : ''}
         <span class="txt">
-          <span class="lbl t-titleS" style="display:block">${esc(o.label)}</span>
+          <span class="lbl t-titleS" style="display:block">${esc(E.optionLabel(o))}</span>
           ${o.description ? `<span class="sub t-bodyS" style="display:block">${esc(o.description)}</span>` : ''}
         </span>
         <span class="mark"></span>

@@ -142,6 +142,12 @@ export function priceLabel(code) {
   return i >= 0 ? priceLabels[i] : PRICE_DEFAULTS[PRICE_DEFAULTS.length - 1].label;
 }
 
+/* 예산 질문의 선택지는 관리자가 정한 가격 구간 이름을 따른다. */
+export function optionLabel(option) {
+  const band = option.flags && option.flags.budgetBand;
+  return band && PRICE_ORDER.indexOf(band) >= 0 ? priceLabel(band) : option.label;
+}
+
 const UPCOMING_STATUSES = new Set([
   'MATURING', 'MATURING_UNRELEASED', 'FIRST_RELEASE_PREORDER',
   'PRODUCTION_UNCONFIRMED', 'UNKNOWN',

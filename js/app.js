@@ -6,8 +6,8 @@
  *  - FlavorIcons(24종)          : 아래 ICONS
  *  - 추천 엔진                   : js/engine.js (Kotlin 원본과 결과 동일)
  */
-import * as E from './engine.js?v=7';
-import * as ADMIN from './admin.js?v=7';
+import * as E from './engine.js?v=8';
+import * as ADMIN from './admin.js?v=8';
 
 /* ==========================================================================
    0. 스케일 — 안드로이드 dp 를 뷰포트에 맞춰 px 로 환산
@@ -414,7 +414,7 @@ function viewQuiz() {
       <div class="glass clickable opt${sel.includes(o.id) ? ' sel' : ''}" data-a="opt" data-i="${i}">
         ${o.icon ? `<span class="ficon">${iconSvg(o.icon)}</span>` : ''}
         <span class="txt">
-          <span class="lbl t-titleS" style="display:block">${esc(o.label)}</span>
+          <span class="lbl t-titleS" style="display:block">${esc(E.optionLabel(o))}</span>
           ${o.description ? `<span class="sub t-bodyS" style="display:block">${esc(o.description)}</span>` : ''}
         </span>
         <span class="mark"></span>
