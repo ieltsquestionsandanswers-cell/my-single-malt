@@ -420,6 +420,117 @@ body {
 #s-guide .g-item.sel .ficon { color: var(--amber); }
 #s-guide .g-main { flex: 1 1 auto; min-width: 0; }
 
+/* =============================================================== 화면: 관리자 */
+#s-admin { height: 100%; }
+
+/* PIN 게이트 */
+.ad-gate { height: 100%; display: flex; align-items: center; justify-content: center; }
+.ad-gate-card {
+  width: calc(520 * var(--s));
+  padding: calc(44 * var(--s)) calc(40 * var(--s));
+  display: flex; flex-direction: column; align-items: center;
+}
+
+/* 골격 */
+.ad-wrap { height: 100%; display: flex; flex-direction: row; }
+.ad-rail {
+  flex: none; width: calc(320 * var(--s));
+  background: var(--surface);
+  border-right: 1px solid var(--hairline-warm);
+  padding: calc(32 * var(--s)) calc(24 * var(--s));
+}
+.ad-body {
+  flex: 1 1 auto; min-width: 0;
+  display: flex; flex-direction: column;
+  padding: calc(32 * var(--s)) calc(40 * var(--s));
+}
+.ad-page { flex: 1 1 auto; min-height: 0; }
+
+.ad-menu {
+  padding: calc(12 * var(--s)) calc(14 * var(--s));
+  border-radius: calc(8 * var(--s));
+  border-left: calc(3 * var(--s)) solid transparent;
+  cursor: pointer;
+}
+.ad-menu.on { background: rgba(201, 133, 50, 0.10); border-left-color: var(--amber); }
+
+/* 통계 */
+.ad-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: calc(14 * var(--s)); }
+.ad-stat { padding: calc(18 * var(--s)); }
+
+/* 목록 행 */
+.ad-list { display: flex; flex-direction: column; gap: calc(10 * var(--s)); }
+.ad-row {
+  display: flex; align-items: center; gap: calc(14 * var(--s));
+  padding: calc(14 * var(--s)) calc(18 * var(--s));
+}
+
+/* 토글 */
+.ad-toggle {
+  display: flex; align-items: center; gap: calc(12 * var(--s));
+  padding: calc(10 * var(--s)) 0; cursor: pointer;
+}
+.sw {
+  flex: none; width: calc(50 * var(--s)); height: calc(28 * var(--s));
+  border-radius: 999px; background: rgba(154, 154, 150, 0.28);
+  border: 1px solid var(--hairline-warm); position: relative;
+  transition: background 0.15s linear;
+}
+.sw > i {
+  position: absolute; top: calc(3 * var(--s)); left: calc(3 * var(--s));
+  width: calc(20 * var(--s)); height: calc(20 * var(--s));
+  border-radius: 999px; background: var(--ivory-dim);
+  transition: transform 0.15s ease-out;
+}
+.sw.on { background: rgba(201, 133, 50, 0.55); border-color: var(--amber); }
+.sw.on > i { background: var(--amber); transform: translateX(calc(22 * var(--s))); }
+.sw.dis { opacity: 0.35; }
+
+/* 스테퍼 */
+.ad-step { display: flex; align-items: center; gap: calc(12 * var(--s)); padding: calc(8 * var(--s)) 0; }
+.stepb {
+  flex: none; width: calc(46 * var(--s)); height: calc(46 * var(--s));
+  border-radius: calc(8 * var(--s));
+  background: var(--card); border: 1px solid var(--hairline-warm);
+  color: var(--ivory); font-family: inherit; cursor: pointer;
+}
+.stepb:active { background: var(--card-raised); }
+.stepv { min-width: calc(70 * var(--s)); text-align: center; }
+
+/* 입력 */
+.ad-field {
+  width: 100%;
+  padding: calc(14 * var(--s)) calc(18 * var(--s));
+  border-radius: calc(8 * var(--s));
+  background: var(--surface);
+  border: 1px solid var(--hairline-warm);
+  color: var(--ivory); font-family: inherit;
+  -webkit-user-select: text; user-select: text;
+}
+.ad-field::placeholder { color: var(--gray-dim); }
+.ad-field:focus { outline: none; border-color: rgba(185, 154, 93, 0.6); }
+
+/* 향미 편집 */
+.ad-fl-left { flex: none; width: calc(320 * var(--s)); }
+.ad-fl-item { padding: calc(12 * var(--s)) calc(14 * var(--s)); }
+.ad-fl-row { display: flex; align-items: center; gap: calc(6 * var(--s)); padding: calc(3 * var(--s)) 0; }
+.ad-fl-row .nm { width: calc(180 * var(--s)); flex: none; }
+.ad-fl-row .lv {
+  flex: none; width: calc(38 * var(--s)); height: calc(30 * var(--s));
+  display: flex; align-items: center; justify-content: center;
+  border-radius: calc(6 * var(--s));
+  background: var(--card); border: 1px solid var(--hairline-warm);
+  color: var(--gray-dim); font-size: calc(14 * var(--s)); cursor: pointer;
+}
+.ad-fl-row .lv.on { background: rgba(201, 133, 50, 0.22); border-color: var(--amber); color: var(--amber); }
+
+/* 가져오기 종류 */
+.ad-kind { padding: calc(18 * var(--s)); }
+
+/* 애니메이션 줄이기 */
+body.reduce-motion #ambient::before { animation: none; }
+body.reduce-motion * { transition: none !important; animation: none !important; }
+
 /* ------------------------------------------------------------- 세로 모드 */
 @media (orientation: portrait) {
   #s-idle .idle-body { flex-direction: column-reverse; justify-content: center; gap: calc(24 * var(--s)); }

@@ -1,5 +1,5 @@
 /* 나만의 싱글몰트 - 오프라인 캐시 */
-const CACHE = 'msm-v2';
+const CACHE = 'msm-v3';
 const ASSETS = [
   './',
   './index.html',
@@ -8,6 +8,7 @@ const ASSETS = [
   './fonts/body-sans.woff2',
   './js/app.js',
   './js/engine.js',
+  './js/admin.js',
   './data/brands.json',
   './data/questions.json',
   './manifest.webmanifest',

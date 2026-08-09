@@ -6,7 +6,8 @@
  *  - FlavorIcons(24종)          : 아래 ICONS
  *  - 추천 엔진                   : js/engine.js (Kotlin 원본과 결과 동일)
  */
-import * as E from './engine.js';
+import * as E from './engine.js?v=6';
+import * as ADMIN from './admin.js?v=6';
 
 /* ==========================================================================
    0. 스케일 — 안드로이드 dp 를 뷰포트에 맞춰 px 로 환산
@@ -34,7 +35,7 @@ const esc = (v) => String(v == null ? '' : v)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 const S = {
-  brands: [], pool: [], questions: [], meta: {},
+  brands: [], pool: [], questions: [], allQuestions: [], meta: {}, cfg: null,
   engine: null, answers: null, current: null, finishReason: '',
   result: null, vector: null,
   detailBrand: null, detailFrom: 'result', detailSources: false,
@@ -287,7 +288,7 @@ function radarSVG(brand) {
    4. 공통 조각
    ========================================================================== */
 function logo(compact) {
-  return `<div class="logo">
+  return `<div class="logo" data-a="logo">
     <div class="wordmark ${compact ? 't-displayS' : 't-displayM'}">MY SINGLE MALT</div>
     ${compact ? '' : '<div class="tagline t-bodyS">나에게 맞는 싱글몰트 찾기</div>'}
   </div>`;
@@ -383,8 +384,8 @@ function viewIdle() {
         ${primary('start', '추천 시작하기', 420)}
         ${vs(18)}
         <div class="row" style="gap:calc(16 * var(--s))">
-          ${ghost('index', '모든 브랜드 둘러보기', 280)}
-          ${ghost('guide', '향미 가이드', 220)}
+          ${S.cfg.showBrandIndexMenu ? ghost('index', '모든 브랜드 둘러보기', 280) : ''}
+          ${S.cfg.showFlavorGuideMenu ? ghost('guide', '향미 가이드', 220) : ''}
         </div>
       </div>
       <div class="idle-right">
@@ -677,7 +678,7 @@ function viewDetail() {
             <div class="kv"><span class="k t-bodyM">대표 제품</span><span class="v t-bodyM">${esc(b.representativeExpression || '-')}</span></div>
             <div class="kv"><span class="k t-bodyM">도수</span><span class="v t-bodyM">${b.representativeAbv != null ? b.representativeAbv + '%' : '-'}</span></div>
             <div class="kv"><span class="k t-bodyM">숙성 연수</span><span class="v t-bodyM">${esc(b.ageStatement || 'NAS')}</span></div>
-            <div class="kv"><span class="k t-bodyM">가격대</span><span class="v t-bodyM">${esc((E.PRICE_DEFAULTS.find((p) => p.code === b.priceBand) || {}).label || '가격 정보 미확정')}</span></div>
+            <div class="kv"><span class="k t-bodyM">가격대</span><span class="v t-bodyM">${esc(priceLabel(b.priceBand))}</span></div>
             <div class="kv"><span class="k t-bodyM">국내 유통</span><span class="v t-bodyM">${esc(E.Availability.labelKo(b.koreaAvailability))}</span></div>
             <div class="kv"><span class="k t-bodyM">증류소</span><span class="v t-bodyM">${esc(b.distilleryName)}</span></div>
           </div>
@@ -899,6 +900,7 @@ const VIEWS = {
   age: viewAge, idle: viewIdle, quiz: viewQuiz, analyzing: viewAnalyzing,
   result: viewResult, compare: viewCompare, detail: viewDetail,
   index: viewIndex, guide: viewGuide,
+  admin: () => ADMIN.view(ADMIN_CTX),
 };
 
 function render() {
@@ -906,11 +908,38 @@ function render() {
 }
 function go(route) { S.route = route; render(); }
 
+/* -------------------------------------------------------------- 관리자 연동 */
+/** 관리자 설정을 데이터와 화면에 다시 반영한다. */
+function applyAdmin() {
+  S.cfg = ADMIN.settings();
+  ADMIN.applyOverrides(S.brands, S.allQuestions);
+  S.questions = S.allQuestions.filter((q) => q.active);
+  S.pool = S.brands.filter((b) => b.adminVisible && b.recommendable && b.hasFlavor && !b.isUpcoming);
+  document.body.classList.toggle('reduce-motion', S.cfg.reduceMotion);
+}
+
+const ADMIN_CTX = {
+  S,
+  refresh: () => render(),
+  reload: () => { applyAdmin(); render(); },
+  exit: () => go('idle'),
+};
+
+/* 관리자 설정을 반영한 추천 엔진 */
+const recEngine = () => new E.RecommendationEngine(S.cfg.weights, S.cfg.options);
+
+/* 가격 구간 이름 (관리자가 바꿀 수 있다) */
+function priceLabel(code) {
+  const i = ['A', 'B', 'C', 'D'].indexOf(code);
+  if (i >= 0 && S.cfg && S.cfg.priceLabels[i]) return S.cfg.priceLabels[i];
+  return (E.PRICE_DEFAULTS.find((p) => p.code === code) || {}).label || '가격 정보 미확정';
+}
+
 /* ==========================================================================
    7. 흐름
    ========================================================================== */
 function startQuiz() {
-  S.engine = new E.AdaptiveQuestionEngine(S.questions, S.pool, new E.RecommendationEngine());
+  S.engine = new E.AdaptiveQuestionEngine(S.questions, S.pool, recEngine());
   S.answers = E.emptyAnswerState();
   S.result = null; S.vector = null; S.searchTerm = '';
   const n = S.engine.next(S.answers);
@@ -953,7 +982,7 @@ function goPrev() {
 
 function compute() {
   S.vector = S.engine.buildVector(S.answers);
-  S.result = new E.RecommendationEngine().recommend(
+  S.result = recEngine().recommend(
     S.pool, S.vector, new Set(S.answers.tastedBrandIds), S.answers.brandRatings,
     S.finishReason === 'MAX_REACHED');
 }
@@ -979,6 +1008,9 @@ app.addEventListener('click', (ev) => {
   const a = el.dataset.a;
 
   switch (a) {
+    case 'logo':
+      if (ADMIN.tapLogo()) { ADMIN.reset(); go('admin'); }
+      return;
     case 'age-yes': return go('idle');
     case 'age-no': return go('age');
     case 'home': return go('idle');
@@ -1039,12 +1071,13 @@ app.addEventListener('click', (ev) => {
       S.answers.brandRatings.set(el.dataset.id, el.dataset.opt);
       return render();
     }
-    default: return;
+    default: ADMIN.action(a, el, ADMIN_CTX); return;
   }
 });
 
 app.addEventListener('input', (ev) => {
   const t = ev.target;
+  if (ADMIN.input(t, ADMIN_CTX)) return;
   if (t.id === 'idx-search') {
     S.idxQuery = t.value;
     const cards = app.querySelector('.cards');
@@ -1085,18 +1118,19 @@ async function boot() {
     return;
   }
   S.brands = E.parseBrands(payload.brands);
-  S.questions = E.parseQuestions(payload.questions).filter((q) => q.active);
-  S.pool = S.brands.filter((b) => b.adminVisible && b.recommendable && b.hasFlavor && !b.isUpcoming);
+  S.allQuestions = E.parseQuestions(payload.questions);
   S.meta = {
     dataVersion: payload.brands.dataVersion || '',
     dataAsOf: payload.brands.dataAsOf || '',
   };
+  ADMIN.load();
+  applyAdmin();
   render();
 }
 
 /* 자동 검증용 훅 */
 window.MSM = {
-  S, E, go, start: startQuiz, next: goNext,
+  S, E, ADMIN, go, start: startQuiz, next: goNext,
   pickOption: (i) => {
     const opts = app.querySelectorAll('.opt');
     if (opts[i]) opts[i].click();
