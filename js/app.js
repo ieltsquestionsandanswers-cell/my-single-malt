@@ -6,8 +6,8 @@
  *  - FlavorIcons(24종)          : 아래 ICONS
  *  - 추천 엔진                   : js/engine.js (Kotlin 원본과 결과 동일)
  */
-import * as E from './engine.js?v=6';
-import * as ADMIN from './admin.js?v=6';
+import * as E from './engine.js?v=7';
+import * as ADMIN from './admin.js?v=7';
 
 /* ==========================================================================
    0. 스케일 — 안드로이드 dp 를 뷰포트에 맞춰 px 로 환산
@@ -915,6 +915,7 @@ function applyAdmin() {
   ADMIN.applyOverrides(S.brands, S.allQuestions);
   S.questions = S.allQuestions.filter((q) => q.active);
   S.pool = S.brands.filter((b) => b.adminVisible && b.recommendable && b.hasFlavor && !b.isUpcoming);
+  E.setPriceLabels(S.cfg.priceLabels);
   document.body.classList.toggle('reduce-motion', S.cfg.reduceMotion);
 }
 
@@ -930,9 +931,7 @@ const recEngine = () => new E.RecommendationEngine(S.cfg.weights, S.cfg.options)
 
 /* 가격 구간 이름 (관리자가 바꿀 수 있다) */
 function priceLabel(code) {
-  const i = ['A', 'B', 'C', 'D'].indexOf(code);
-  if (i >= 0 && S.cfg && S.cfg.priceLabels[i]) return S.cfg.priceLabels[i];
-  return (E.PRICE_DEFAULTS.find((p) => p.code === code) || {}).label || '가격 정보 미확정';
+  return E.priceLabel(code);
 }
 
 /* ==========================================================================

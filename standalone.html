@@ -700,6 +700,21 @@ const PRICE_DEFAULTS = [
   { code: 'X', label: '가격 정보 미확정' },
 ];
 
+/* 화면에 보여줄 가격 구간 이름. 관리자가 바꾸면 setPriceLabels 로 갱신된다. */
+let priceLabels = PRICE_DEFAULTS.map((p) => p.label);
+
+function setPriceLabels(labels) {
+  priceLabels = PRICE_DEFAULTS.map((p, i) => {
+    const v = labels && labels[i] != null ? String(labels[i]).trim() : '';
+    return v || p.label;
+  });
+}
+
+function priceLabel(code) {
+  const i = PRICE_DEFAULTS.findIndex((p) => p.code === code);
+  return i >= 0 ? priceLabels[i] : PRICE_DEFAULTS[PRICE_DEFAULTS.length - 1].label;
+}
+
 const UPCOMING_STATUSES = new Set([
   'MATURING', 'MATURING_UNRELEASED', 'FIRST_RELEASE_PREORDER',
   'PRODUCTION_UNCONFIRMED', 'UNKNOWN',
@@ -1622,7 +1637,7 @@ function purchaseReason(b, v, role) {
     const want = PRICE_ORDER.indexOf(band);
     const has = PRICE_ORDER.indexOf(b.priceBand);
     if (want >= 0 && has >= 0 && has <= want) {
-      const label = (PRICE_DEFAULTS.find((p) => p.code === b.priceBand) || {}).label || '';
+      const label = priceLabel(b.priceBand);
       return `생각하신 예산 범위(${label}) 안에서 선택할 수 있습니다.`;
     }
   }
@@ -1997,7 +2012,7 @@ function advance(engine, q, state) {
   return { state: next, next: r };
 }
 
-return { FLAVOR, CASK, USE, ALL, SIZE, indexOf, useIndexOf, GROUP_CORE, GROUP_PEAT_TEXTURE, GROUP_CASK, CHART_AXES, featureLabel, Availability, PRICE_ORDER, PRICE_DEFAULTS, parseBrands, brandValue, useValue, parseQuestions, BRAND_RATINGS, TasteVector, PROFILES, classifyProfiles, classifyBrandProfile, flavorTags, DEFAULT_WEIGHTS, DEFAULT_OPTIONS, ROLES, RecommendationEngine, similarity, reasonsFor, servingAdvice, varianceNotice, emptyAnswerState, cloneAnswerState, AdaptiveQuestionEngine, applySelection, canProceed, advance };
+return { FLAVOR, CASK, USE, ALL, SIZE, indexOf, useIndexOf, GROUP_CORE, GROUP_PEAT_TEXTURE, GROUP_CASK, CHART_AXES, featureLabel, Availability, PRICE_ORDER, PRICE_DEFAULTS, setPriceLabels, priceLabel, parseBrands, brandValue, useValue, parseQuestions, BRAND_RATINGS, TasteVector, PROFILES, classifyProfiles, classifyBrandProfile, flavorTags, DEFAULT_WEIGHTS, DEFAULT_OPTIONS, ROLES, RecommendationEngine, similarity, reasonsFor, servingAdvice, varianceNotice, emptyAnswerState, cloneAnswerState, AdaptiveQuestionEngine, applySelection, canProceed, advance };
 })();
 var __MSM_ADMIN = (function () {
 var ENG = __MSM_ENG;
@@ -3984,6 +3999,7 @@ function applyAdmin() {
   ADMIN.applyOverrides(S.brands, S.allQuestions);
   S.questions = S.allQuestions.filter((q) => q.active);
   S.pool = S.brands.filter((b) => b.adminVisible && b.recommendable && b.hasFlavor && !b.isUpcoming);
+  E.setPriceLabels(S.cfg.priceLabels);
   document.body.classList.toggle('reduce-motion', S.cfg.reduceMotion);
 }
 
@@ -3999,9 +4015,7 @@ const recEngine = () => new E.RecommendationEngine(S.cfg.weights, S.cfg.options)
 
 /* 가격 구간 이름 (관리자가 바꿀 수 있다) */
 function priceLabel(code) {
-  const i = ['A', 'B', 'C', 'D'].indexOf(code);
-  if (i >= 0 && S.cfg && S.cfg.priceLabels[i]) return S.cfg.priceLabels[i];
-  return (E.PRICE_DEFAULTS.find((p) => p.code === code) || {}).label || '가격 정보 미확정';
+  return E.priceLabel(code);
 }
 
 /* ==========================================================================

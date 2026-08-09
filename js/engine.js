@@ -127,6 +127,21 @@ export const PRICE_DEFAULTS = [
   { code: 'X', label: '가격 정보 미확정' },
 ];
 
+/* 화면에 보여줄 가격 구간 이름. 관리자가 바꾸면 setPriceLabels 로 갱신된다. */
+let priceLabels = PRICE_DEFAULTS.map((p) => p.label);
+
+export function setPriceLabels(labels) {
+  priceLabels = PRICE_DEFAULTS.map((p, i) => {
+    const v = labels && labels[i] != null ? String(labels[i]).trim() : '';
+    return v || p.label;
+  });
+}
+
+export function priceLabel(code) {
+  const i = PRICE_DEFAULTS.findIndex((p) => p.code === code);
+  return i >= 0 ? priceLabels[i] : PRICE_DEFAULTS[PRICE_DEFAULTS.length - 1].label;
+}
+
 const UPCOMING_STATUSES = new Set([
   'MATURING', 'MATURING_UNRELEASED', 'FIRST_RELEASE_PREORDER',
   'PRODUCTION_UNCONFIRMED', 'UNKNOWN',
@@ -1049,7 +1064,7 @@ function purchaseReason(b, v, role) {
     const want = PRICE_ORDER.indexOf(band);
     const has = PRICE_ORDER.indexOf(b.priceBand);
     if (want >= 0 && has >= 0 && has <= want) {
-      const label = (PRICE_DEFAULTS.find((p) => p.code === b.priceBand) || {}).label || '';
+      const label = priceLabel(b.priceBand);
       return `생각하신 예산 범위(${label}) 안에서 선택할 수 있습니다.`;
     }
   }

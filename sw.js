@@ -1,5 +1,5 @@
 /* 나만의 싱글몰트 - 오프라인 캐시 */
-const CACHE = 'msm-v3';
+const CACHE = 'msm-v4';
 const ASSETS = [
   './',
   './index.html',
